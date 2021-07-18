@@ -58,7 +58,7 @@ console.log(validateCred(valid1));
 // Return List of Invalid Cards from list of Random Credit Card Numbers
 const findInvalidCards = nestedArray => {
   const invalidCards = [];
-  for (card of nestedArray) {
+  for (let card of nestedArray) {
     if (validateCred(card) === false) {
       invalidCards.push(card)
     }
@@ -89,7 +89,7 @@ console.log(findInvalidCards(batch))
 // Log to console companies that have issued faulty cards, without repeating company names.
 const idInvalidCardCompanies = invalidCards => {
   const invalidCompanies = [];
-  for (card of invalidCards) {
+  for (let card of invalidCards) {
     if (card[0] === 3) {
       if (invalidCompanies.indexOf('Amex') === -1) {
         invalidCompanies.push('Amex');

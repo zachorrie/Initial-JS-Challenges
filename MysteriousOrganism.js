@@ -35,7 +35,7 @@ const returnRandBase = () => {
         let i = 0;
         let identBaseCount = 0;
   
-        for (base of this.dna) {;
+        for (let base of this.dna) {;
           if (base === otherPA.dna[i]) {
             identBaseCount += 1;
           }
@@ -51,7 +51,7 @@ const returnRandBase = () => {
   
       willLikelySurvive() {
         let cgCount = 0;
-        for (base of this.dna) {
+        for (let base of this.dna) {
           if (base === 'C' || base === 'G') {
             cgCount += 1;
           }
@@ -65,7 +65,7 @@ const returnRandBase = () => {
   
       complementStrand() {
         const complementStrand = []
-        for (base of this.dna) {
+        for (let base of this.dna) {
           if (base === 'A') {
             complementStrand.push('T');
           } else if (base === 'T') {
